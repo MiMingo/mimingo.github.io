@@ -27,7 +27,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Setup node
-          uses: actions/setup-node
+          uses: actions/setup-node@v4
         - name: Build static files
           id: build
           run: npm run build
