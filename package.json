@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:move": "cp src/index.html dist/index.html && cp -r src/img dist/img",
     "build:sass": "sass src/sass:dist/sass",
-    "build": "cp src/index.html dist/index.html && npm run build:sass"
+    "build:ts": "npx tsc src/script/*.ts --outDir dist/script",
+    "build": "npm run build:move && npm run build:sass && npm run build:ts"
   },
   "private": true,
   "dependencies": {
     "http-server": "^14.1.1",
-    "sass": "^1.83.4"
+    "sass": "^1.83.4",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
   }
 }

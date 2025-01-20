@@ -8,3 +8,35 @@ body {
   margin: 0;
   font-family: "Dank Mono"
 }
+
+canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+main {
+  padding: 5rem;
+  border-radius:10px;
+  user-select: none;
+  position:relative;
+
+  .bg-drop {
+    position: absolute;
+    top:0; left: 0;
+    background-color: white;
+    filter: blur(8px);
+  }
+}
+
+button#painter {
+  all: unset;
+  color: forestgreen;
+
+  &:hover {
+    color: darkorange;
+    cursor: pointer;
+  }
+}
