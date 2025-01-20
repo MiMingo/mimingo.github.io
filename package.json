@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "sass src/sass:dist/sass",
+    "build": "cp src/index.html dist/index.html && npm run build:sass"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "sass": "^1.83.4"
+  }
 }
